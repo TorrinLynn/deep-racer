@@ -1,4 +1,4 @@
-After setting up from [here](https://github.com/kevinmarlis/deep-racer/blob/master/Mac-Local-Training-Installation.md) 
+After setting up from [here](https://github.com/kevinmarlis/deep-racer/blob/master/Mac-Local-Training-Installation.md)
 
 #### Bold lines are terminal commands
 
@@ -19,10 +19,11 @@ Make sure Docker is running.
 8. **docker tag crr0004/sagemaker-rl-tensorflow:console 520713654638.dkr.ecr.us-east-1.amazonaws.com/sagemaker-rl-tensorflow:coach0.11-cpu-py3**
 9. **mkdir -p ~/.sagemaker && cp config.yaml ~/.sagemaker**
 10. **cd rl_coach**
-11. **export LOCAL_ENV_VAR_JSON_PATH=$(greadlink -f ./env_vars.json)**
-12. **ipython rl_deepracer_coach_robomaker.py**
+11. **. ./env.sh**
+12. **export LOCAL_ENV_VAR_JSON_PATH=\$(greadlink -f ./env_vars.json)**
+13. **ipython rl_deepracer_coach_robomaker.py**
 
-## Robomaker 
+## Robomaker
 
 13. From Terminal, open a new shell (command+T)
 14. **cd ..** to return to ~/deepracer
